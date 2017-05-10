@@ -1,6 +1,10 @@
-﻿namespace TinyEventstore.Repository
+﻿using System.Data;
+
+namespace TinyEventstore.Producer
 {
-    interface IRepository
+    public interface IRepository
     {
+        T GetById<T>(string id);
+        void Save(IAggregate aggregate);
     }
 }

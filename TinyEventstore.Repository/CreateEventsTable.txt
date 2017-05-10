@@ -1,0 +1,19 @@
+﻿CREATE TABLE [dbo].[Events](
+	[Offset] [bigint] IDENTITY(1,1) NOT NULL,
+	[AggregateId] [nvarchar](400) NOT NULL,
+	[Version] [int] NOT NULL,
+	[AggregateType] [nvarchar](4000) NOT NULL,
+	[Timestamp] [datetime] NOT NULL,
+	[Header] [nvarchar](max) NULL,
+	[Body] [nvarchar](max) NOT NULL,
+		CONSTRAINT [PK_Events] PRIMARY KEY CLUSTERED 
+		(
+			[Offset] ASC
+		) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+ALTER TABLE [dbo].[Events] ADD CONSTRAINT [DF_Events_Timestamp]  DEFAULT (getdate()) FOR [Timestamp]
+
+CREATE INDEX Idx_Events_AggregateId
+ON Events(AggregateId)

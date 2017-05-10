@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyEventstore.Repository", "TinyEventstore.Repository\TinyEventstore.Repository.csproj", "{E6F93D2E-C96F-47C6-A5CD-DE514C362F0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyEventstore.Producer", "TinyEventstore.Repository\TinyEventstore.Producer.csproj", "{E6F93D2E-C96F-47C6-A5CD-DE514C362F0C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{54B4D027-567A-47DA-B115-A550B1B1ACDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyEventstore.Repository.Tests", "Tests\TinyEventstore.Repository.Tests\TinyEventstore.Repository.Tests.csproj", "{C909505F-A5B4-4344-8642-05D3A9E4ED01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyEventstore.Producer.Tests", "Tests\TinyEventstore.Repository.Tests\TinyEventstore.Producer.Tests.csproj", "{C909505F-A5B4-4344-8642-05D3A9E4ED01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
