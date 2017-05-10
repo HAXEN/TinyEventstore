@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyEventstore.Producer", "TinyEventstore.Repository\TinyEventstore.Producer.csproj", "{E6F93D2E-C96F-47C6-A5CD-DE514C362F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyEventstore.Producer", "TinyEventstore.Repository\TinyEventstore.Producer.csproj", "{E6F93D2E-C96F-47C6-A5CD-DE514C362F0C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{54B4D027-567A-47DA-B115-A550B1B1ACDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyEventstore.Producer.Tests", "Tests\TinyEventstore.Repository.Tests\TinyEventstore.Producer.Tests.csproj", "{C909505F-A5B4-4344-8642-05D3A9E4ED01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyEventstore.Producer.Tests", "Tests\TinyEventstore.Repository.Tests\TinyEventstore.Producer.Tests.csproj", "{C909505F-A5B4-4344-8642-05D3A9E4ED01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyEventstore.Consumer", "TinyEventstore.Consumer\TinyEventstore.Consumer.csproj", "{7D2326BA-76C3-49C1-AA15-37D0A16C1B95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyEventstore.Consumer.Tests", "Tests\TinyEventstore.Consumer.Tests\TinyEventstore.Consumer.Tests.csproj", "{BF012CE6-77A7-4EC1-919E-932992ECB1BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,11 +27,20 @@ Global
 		{C909505F-A5B4-4344-8642-05D3A9E4ED01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C909505F-A5B4-4344-8642-05D3A9E4ED01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C909505F-A5B4-4344-8642-05D3A9E4ED01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D2326BA-76C3-49C1-AA15-37D0A16C1B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2326BA-76C3-49C1-AA15-37D0A16C1B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2326BA-76C3-49C1-AA15-37D0A16C1B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2326BA-76C3-49C1-AA15-37D0A16C1B95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF012CE6-77A7-4EC1-919E-932992ECB1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF012CE6-77A7-4EC1-919E-932992ECB1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF012CE6-77A7-4EC1-919E-932992ECB1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF012CE6-77A7-4EC1-919E-932992ECB1BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C909505F-A5B4-4344-8642-05D3A9E4ED01} = {54B4D027-567A-47DA-B115-A550B1B1ACDF}
+		{BF012CE6-77A7-4EC1-919E-932992ECB1BD} = {54B4D027-567A-47DA-B115-A550B1B1ACDF}
 	EndGlobalSection
 EndGlobal
