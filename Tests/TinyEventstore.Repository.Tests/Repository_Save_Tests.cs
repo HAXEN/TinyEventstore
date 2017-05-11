@@ -5,11 +5,12 @@ using Xunit;
 
 namespace TinyEventstore.Producer.Tests
 {
-    public class RepositoryTests
+    public class Repository_Save_Tests
     {
-        private string _connectionString = "Data Source=RRY-PC;Initial Catalog=eventstore;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True";
+        private string _connectionString =
+            "Data Source=RRY-PC;Initial Catalog=eventstore;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True";
 
-        public RepositoryTests()
+        public Repository_Save_Tests()
         {
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -46,29 +47,30 @@ namespace TinyEventstore.Producer.Tests
                 connection.Close();
             }
         }
-    }
 
-    public class TestEntity : IAggregate
-    {
-        public IEnumerable<object> GetUncommittedEvents()
+        public class TestEntity : IAggregate
         {
-            yield return new TestEntityCreated
+            public IEnumerable<object> GetUncommittedEvents()
             {
-                Id = "testkalle",
-                Name = "Test Kalle",
-            };
+                yield return new TestEntityCreated
+                {
+                    Id = "testkalle",
+                    Name = "Test Kalle",
+                };
+            }
+
+            public int Version => 1;
+            public string Id => "testkalle";
+
+            public void ClearUncommitted()
+            {
+            }
         }
 
-        public int Version => 1;
-        public string Id => "testkalle";
-        public void ClearUncommitted()
+        public class TestEntityCreated
         {
+            public string Id { get; set; }
+            public string Name { get; set; }
         }
-    }
-
-    public class TestEntityCreated
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
     }
 }
