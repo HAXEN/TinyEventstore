@@ -13,7 +13,7 @@
 ) ON [PRIMARY]
 
 
-ALTER TABLE [dbo].[Events] ADD CONSTRAINT [DF_Events_Timestamp]  DEFAULT (getdate()) FOR [Timestamp]
+ALTER TABLE [dbo].[Events] ADD CONSTRAINT [DF_Events_Timestamp]  DEFAULT (getutcdate()) FOR [Timestamp]
 
 CREATE INDEX Idx_Events_AggregateId
 ON Events(AggregateId)

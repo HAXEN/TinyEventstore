@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\TinyEventstore.Consumer\TinyEventstore.Consumer.csproj" />
+    <ProjectReference Include="..\..\TinyEventstore.Repository\TinyEventstore.Producer.csproj" />
   </ItemGroup>
 
   <ItemGroup>
