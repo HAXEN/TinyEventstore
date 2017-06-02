@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TinyEventstore.Commanding;
 
 namespace TinyEventstore.Samples.Api.Controllers
 {
@@ -19,6 +20,4 @@ namespace TinyEventstore.Samples.Api.Controllers
             return _commandResolver.Execute(commandName, command);
         }
     }
-
-    public abstract class CommandBase { }
 }

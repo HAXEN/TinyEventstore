@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TinyEventstore.Samples.Api.Controllers;
+using TinyEventstore.Commanding;
 
 namespace TinyEventstore.Samples.Api
 {
@@ -9,22 +9,6 @@ namespace TinyEventstore.Samples.Api
         {
             throw new System.NotImplementedException();
         }
-    }
-
-    public abstract class CommandHandlerBase<TCommand> : ICommandHandler
-        where TCommand : CommandBase
-    {
-        protected abstract IActionResult Handle(TCommand command);
-
-        public IActionResult Handle(CommandBase command)
-        {
-            return Handle((TCommand) command);
-        }
-    }
-
-    public interface ICommandHandler
-    {
-        IActionResult Handle(CommandBase command);
     }
 
     public class CreateTodoCommand : CommandBase

@@ -10,7 +10,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.1" />
@@ -22,6 +22,14 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TinyEventstore.Commanding\TinyEventstore.Commanding.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="TinyEventstore.Commanding">
+      <HintPath>..\..\TinyEventstore.Commanding\bin\Debug\netstandard1.4\TinyEventstore.Commanding.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
